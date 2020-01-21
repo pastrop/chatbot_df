@@ -130,7 +130,7 @@ sns.set(font_scale=1.4)
 
 corr = df_model1_filtered.corr()
 fig = plt.subplots(figsize=(15,15))
-cmap = sns.diverging_palette(0, 359, as_cmap=True)
+cmap = sns.diverging_palette(220, 20, sep=20, as_cmap=True)
 
 ax = sns.heatmap(corr, square=True, cbar_kws={'shrink': 0.82}, annot=True, annot_kws={'size': 14})
 labels_list = df_model1_filtered.columns
