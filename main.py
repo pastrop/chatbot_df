@@ -309,6 +309,7 @@ def webhook():
 	if action == 'data.average':
 		columnName = req.get('queryResult').get('parameters').get('columnName')
 		#validate information to provide appropriate response
+		print('columnName under data.average action - {}'.format(columnName))
 		if validate_columns(columnName, 1) == "not-number":
 			res = "Please specify a numeric column. To see the list of numeric columns, try asking: What numeric columns are present in the data?"
 		elif validate_columns(columnName, 1) == "bad-length":
